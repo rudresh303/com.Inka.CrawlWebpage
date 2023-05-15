@@ -1,0 +1,42 @@
+# Import the necessary libraries: requests for sending HTTP requests, 'BeautifulSoup' for parsing HTML, and 'csv' for reading and writing CSV files.
+
+import requests
+from bs4 import BeautifulSoup
+import csv
+
+
+# URL of the webpage to crawl
+url = "https://example.com/movies"
+
+
+# Send a GET request to the webpage and get its HTML content using the requests.get() function, and store the content in a variable called content.
+response = requests.get(url)
+content = response.content
+
+
+# parse the HTML content using BeautifulSoup and store the parsed content in a variable called soup.
+soup = BeautifulSoup(content, "html.parser")
+
+
+# Find all the links on the webpage using the 'soup.find_all()' method, and append the links containing the string "movie" to a list called 'movie_links'.
+movie_links = []
+for link in soup.find_all("a"):
+    if "movie" in link.get("href"):
+        movie_links.append(link.get("href"))
+
+
+# Iterate over the 'movie_links' list and check if each link is playable by sending an HTTP GET request to the link and checking if the response status code is 200 and the 'Content-Type' header starts with the string "video". If the link is playable, we append it to a list called 'playable_links'
+playable_links = []
+for link in movie_links:
+    response = requests.get(link)
+    if response.status_code == 200:
+        content_type = response.headers["content-type"]
+        if content_type.startswith("video"):
+            playable_links.append(link)
+
+
+# Store the playable links in a CSV file called "playable_links.csv" using the 'csv.writer()' method and the 'writerow()' method to write each link to a new row in the file.
+with open("playable_links.csv", "w", newline="") as csvfile:
+    writer = csv.writer(csvfile)
+    for link in playable_links:
+        writer.writerow([link])
