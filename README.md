@@ -20,3 +20,26 @@ You can install these packages by running the following commands in your termina
                 2.  pip install requests
                 
                 3.  pip install pandas
+ 
+# How to launch the project and test:
+Step 1: Create a new Python script file and open it in a code editor.
+
+Step 2: Import the necessary modules.
+ 
+         from bs4 import BeautifulSoup
+         
+         import requests
+         
+         import csv
+         
+Step 3: Write the code to crawl the webpage, check movie availability,check it is playable or not and store the links.
+
+Step 4: Save the Python file with a .py extension.
+
+Step 5: Open your terminal or command prompt and navigate to the directory where the Python file is located.
+
+Step 6: Execute the Python script by running the following command:
+
+        python your_script_name.py
+                
+                
