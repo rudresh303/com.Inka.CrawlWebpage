@@ -1,6 +1,7 @@
 # com.Inka.CrawlWebpage
 python code for crawl webpage where movie is available, check whether it is playable and store the links in array or csv file
 # Prerequisites
+A Windows 10/11 PC
 
 Python: Install Python on your system. You can download the latest version from the official Python website (https://www.python.org) and follow the installation instructions specific to your operating system.
 
