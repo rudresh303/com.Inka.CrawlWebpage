@@ -41,5 +41,22 @@ Step 5: Open your terminal or command prompt and navigate to the directory where
 Step 6: Execute the Python script by running the following command:
 
         python your_script_name.py
-                
+        
+# Sample output for movie bhoola
+Assuming the links are stored in the 'link_array' variable
+
+movie_name = "Bhoola"
+
+print(f"Links for movie '{movie_name}':")
+
+for link in link_array:
+
+    print(link)
+    
+ Output:
+ 
+ Links for movie 'Bhoola':
+ https://example.com/movie1
+ https://example.com/movie2
+ https://example.com/movie3
                 
