@@ -56,7 +56,7 @@ for link in link_array:
  Output:
  
  Links for movie 'Bhoola':
- /html/body/script[31]
+ https://example.com/movie1
  https://example.com/movie2
  https://example.com/movie3
                 
