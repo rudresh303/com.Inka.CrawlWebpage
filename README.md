@@ -7,6 +7,6 @@ Python packages: Install the necessary Python packages using pip, the package in
                 2. requests: Used for making HTTP requests to fetch web pages.
                 3. pandas (optional): Used for storing the links in a CSV file (if you prefer CSV over an array).
 You can install these packages by running the following commands in your terminal or command prompt:
-               1.  pip install beautifulsoup4
-               2.  pip install requests
-               3.  pip install pandas
+                1.  pip install beautifulsoup4
+                2.  pip install requests
+                3.  pip install pandas
